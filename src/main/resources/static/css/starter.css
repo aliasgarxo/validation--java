@@ -1,0 +1,225 @@
+@charset "ISO-8859-1";
+
+html {
+	font-size: 0.9rem;
+}
+
+html[dir="rtl"] table.rtl thead tr th, html[dir="rtl"] table.rtl thead tr td, html[dir="rtl"] table.rtl tbody tr th, html[dir="rtl"] table.rtl tbody tr td {
+	text-align: right;
+	/* color: blue; */
+}
+
+html[dir="ltr"] table.rtl thead tr th, html[dir="ltr"] table.rtl thead tr td, html[dir="ltr"] table.rtl tbody tr th, html[dir="ltr"] table.rtl tbody tr td {
+	text-align: left;
+	/* color: red; */
+}
+
+body {
+	padding-top: 2px;
+}
+
+@include media-breakpoint-up (sm ) {
+	html { 
+		font-size:1.2rem;
+	}
+}
+
+@include media-breakpoint-up (md ) {
+	html { 
+		font-size:1.4rem;
+	}
+}
+
+@include media-breakpoint-up (lg ) {
+	html { 
+		font-size:1.6rem;
+	}
+}
+
+.navbar-template {
+	padding: 2px 20px 2px 20px;
+}
+
+.starter-template {
+	padding: 5px 20px 5px 20px;
+}
+
+.small-table-header thead th {
+	background-color: gray;
+	color: white;
+}
+
+tr.selected td {
+	background-color: #c3c3ff;
+	/* background-color: CornflowerBlue; */
+}
+
+.table-header-new {
+	display: table-cell;
+    font-weight: bold;
+   	background-color: gray;
+	color: white;
+}
+
+.anotherhover tbody tr:hover td, tbody tr:hover th {
+	background: #bfc9c9;
+	/* background: CornflowerBlue; */
+}
+
+.table-hover > tbody tr.no-hover:hover td,
+.table-hover > tbody tr.no-hover:hover th {
+    background-color: white;
+    opacity: 1.0;
+}
+
+/*******************************
+* Does not work properly if "in" is added after "collapse".
+* Accordian panels
+*******************************/
+.card>.card-body {
+	padding: 0.5rem 0.5rem 0.0rem 0.5rem;
+}
+
+.card>.card-footer {
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.card>.card-header {
+	/* color: #333;
+	background-color: #fff; */
+	border-color: #fff;
+	padding: 0.0rem 0.0rem 0.0rem 1.0rem;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.card>.card-header a {
+	display: block;
+	padding: 0.5rem 1.0rem 0.0rem 0.0rem;
+}
+
+.card>.card-header a:after {
+	content: "";
+	position: relative;
+	top: 0.3rem;
+	display: inline-block;
+	/* font-family: 'Glyphicons Halflings'; */
+	font-style: normal;
+	font-weight: 800;
+	font-size: 1.0rem;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	float: right;
+	transition: transform .25s linear;
+	-webkit-transition: -webkit-transform .25s linear;
+}
+
+/* .card>.card-header a[aria-expanded="true"] {
+  background-color: #eee;
+} */
+.card>.card-header a[aria-expanded="true"]:after {
+	content: "\25BC";
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.card>.card-header a[aria-expanded="false"]:after {
+	content: "\25BC";
+	/*  	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg); */
+}
+
+/* Page Loader */
+#cover-spin {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(255, 255, 255, 0.7);
+	z-index: 9999;
+	display: none;
+}
+
+@-webkit-keyframes spin {
+	from {-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	from {transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+#cover-spin::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 48%;
+	top: 40%;
+	width: 40px;
+	height: 40px;
+	border-style: solid;
+	border-color: black;
+	border-top-color: transparent;
+	border-width: 4px;
+	border-radius: 50%;
+	-webkit-animation: spin .8s linear infinite;
+	animation: spin .8s linear infinite;
+}
+
+.validation-message {
+	font-style: normal;
+	font-size: 12px;
+	color: #FF1C19;
+}
+
+.admin-message-text {
+	font-style: normal;
+	font-size: 22px;
+	color: #004080;
+}
+
+.validation-feedback {
+	display: none;
+	width: 100%;
+	margin-top: .25rem;
+	font-size: 100%;
+	color: #dc3545
+}
+
+.btn-color-details {
+  /*background-color: #cef2dd;*/
+  border-color: #bfc9c9;
+}
+
+.btn-color-view {
+  /*background-color: #cce5ff;*/
+  border-color: #bfc9c9;
+}
+
+.btn-color-copy {
+  /*background-color: #bbeb8a;*/
+  border-color: #bfc9c9;
+}
+
+.btn-color-delete {
+  /*background-color: #fcc2c2;*/
+  border-color: #bfc9c9;
+}
+
+.footer-color {
+  /* background-color: #080404; */
+  background-color: gray;
+}
+
